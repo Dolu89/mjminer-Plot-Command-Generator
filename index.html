@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <title>mjminer Plot Command Generator</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-sm-8 col-sm-push-2">
+        <div class="panel panel-primary">
+          <div class="panel-heading with-border">
+            <h3 class="panel-title">mjminer plot command generator</h3>
+          </div>
+          <!-- /.box-header -->
+          <!-- form start -->
+          <form class="form-horizontal" id='nonce-calc'>
+            <div class="panel-body">
+              <div class="form-group">
+                <label for="num-id" class="col-sm-4 control-label">Numeric ID</label>
+                <div class="col-sm-5">
+                  <input type="number" class="form-control" id="num-id" placeholder="Numeric ID" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="plot-path" class="col-sm-4 control-label">Plot Path: </label>
+                <div class="col-sm-5">
+                  <input type="text" class="form-control" id="plot-path" placeholder="Where to plot?" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="hdd-space" class="col-sm-4 control-label">HDD Space</label>
+                <div class="col-sm-5">
+                  <div class="input-group">
+                    <input type="number" class="form-control" id="hdd-space" placeholder="0" required>
+                    <div class="input-group-addon">GigaByte</div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="ram" class="col-sm-4 control-label">RAM to be used: </label>
+
+                <div class="col-sm-5">
+                  <div class="input-group">
+                    <input type="number" class="form-control" id="ram" placeholder="0" required>
+                    <div class="input-group-addon">GigaByte</div>
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="form-group">
+                <label for="thread" class="col-sm-4 control-label">CPU Thread to be used: </label>
+                <div class="col-sm-5">
+                  <input type="number" class="form-control" id="thread" value=1 required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="start-nonce" class="col-sm-4 control-label">Begining Nonce: </label>
+                <div class="col-sm-5">
+                  <input type="number" class="form-control" id="start-nonce" value=0 required>
+                </div>
+              </div>
+              <div class="form-group">
+                  <div class="col-sm-5 col-sm-push-4">
+                    <button type="submit" class="btn btn-primary btn-block">Generate Command</button>
+                  </div>
+              </div>
+
+            </div>
+            <!-- /.box-body -->
+            <div class="panel-footer">
+
+              <h4><a href="https://github.com/r-majere/mjminer" target="_blank">mjminer</a> Command</h4>
+
+              <textarea class="form-control" id= "jminer-win" rows="2"></textarea>
+              <!-- Target -->
+              <button class="btn btn-warning form-control" data-clipboard-target="#jminer-win">
+                <img src="images/clippy.svg" class="img-responsive clippy " alt="Copy to clipboard">Copy to clipboard
+              </button>
+            </div>
+            <!-- /.box-footer -->
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+    <script src="js/jQuery-2.2.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
